@@ -22,12 +22,8 @@ async function checkIfNew() {
 
 // Notifies Discord server
 async function notify(video, minutes) {
-    const message = {
-        username: process.env.WEBHOOK_USERNAME,
-        avatar_url: process.env.WEBHOOK_PFP,
-        content: `**${video.snippet.channelTitle}** uploaded **[${video.snippet.title}](https://youtu.be/${video.id.videoId})** ${minutes} minutes ago`
-    };
-    await axios.post(`https://discordapp.com/api/webhooks/${process.env.WEBHOOK_ID}/${process.env.WEBHOOK_TOKEN}`, message);
+    const content = `**${video.snippet.channelTitle}** uploaded **[${video.snippet.title}](https://youtu.be/${video.id.videoId})** ${minutes} minute${minutes == 1 ? "" : "s"} ago`;
+    await axios.post(process.env.WEBHOOK_URL, {content});
 }
 
 console.log("Successfully started script!");
