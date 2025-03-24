@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "axios": "^1.8.4",
+    "dotenv": "^16.4.7"
+  },
+  "name": "youtube-upload-discord-notifier",
+  "description": "Sends a Discord notification about a YouTube channel's latest upload",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Galastique",
+  "license": "ISC"
+}
