@@ -38,10 +38,10 @@ Creating a key is actually quite simple:
 
 Be sure to keep that in your clipboard, it's the final thing we will need for this. 
 
-## Creating Your ENV File
+## Creating Your .ENV File
 The final step will be creating the .env file at the root of the project's directory. You will have to include the 3 things you have copied thus far as follows:
 
 ![Screenshot of contents of .env file](https://imgur.com/LQPxR2H.png)
 
 ## Running the Script
-There you have it! Everything is ready to go! All you have to do to execute the script is run `npm start` in the console. 
+There you have it! Everything is ready to go! All you have to do to execute the script is run `npm start` in the console. The first verification will happen 60 minutes after the script is started. 
