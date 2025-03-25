@@ -44,4 +44,4 @@ The final step will be creating the .env file at the root of the project's direc
 ![Screenshot of contents of .env file](https://imgur.com/LQPxR2H.png)
 
 ## Running the Script
-There you have it! Everything is ready to go! All you have to do to execute the script is run `npm start` in the console. The first verification will happen 60 minutes after the script is started. 
+There you have it, everything is ready to go! All you have to do to execute the script is run `npm start` in the console. You can either run this locally on your PC, on a Raspberry Pi or even some free cloud based code running tool. The first verification will happen 60 minutes after the script is started. 
