@@ -20,7 +20,7 @@ In order to fetch the latest video from your channel, you will first need to get
 
 Here's where you can find it:
 
-![Screenshot of where your channel ID can be found](https://i.imgur.com/nhQ031g.png)
+![Screenshot of where your channel ID can be found](https://i.imgur.com/RJCZaMJ.png)
 
 ## Creating Your Discord Webhook
 The next step is an easy one. You will need to create a Discord webhook on the channel you would like to receive the notifications. 
