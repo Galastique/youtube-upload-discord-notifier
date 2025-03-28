@@ -1,22 +1,15 @@
 const axios = require("axios");
 require("dotenv").config();
 
-// Fetches last video uploaded by specific YouTube channel
-async function getLatestVideo() {
-    const video = await axios.get(`https://www.googleapis.com/youtube/v3/search?key=${process.env.GOOGLE_API_KEY}&channelId=${process.env.CHANNEL_ID}&order=date&part=snippet&maxResults=1`);
-    return video.data.items[0];
-}
-
-// Checks if video was uploaded within the past hour
+// Checks if latest video was uploaded within the past hour
 async function checkIfNew() {
-    const latestVideo = await getLatestVideo();
-    const now = Date.now();
+    const latestVideo = (await axios.get(`https://www.googleapis.com/youtube/v3/search?key=${process.env.GOOGLE_API_KEY}&channelId=${process.env.CHANNEL_ID}&order=date&part=snippet&maxResults=1`)).data.items[0];
+    const currentData = Date.now();
     const uploadDate = new Date(latestVideo.snippet.publishedAt).getTime();
-    const minutes = Math.round((now - uploadDate) / (60 * 1000));
  
-    if (uploadDate + 60 * 60 * 1000 > now) {
+    if (uploadDate + 60 * 60 * 1000 > currentData) {
         console.log("A video was uploaded within the past hour");
-        await notify(latestVideo, minutes);
+        await notify(latestVideo, Math.round((currentData - uploadDate) / (60 * 1000)));
     }
 }
 
